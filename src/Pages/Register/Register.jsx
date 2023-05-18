@@ -29,8 +29,8 @@ const Register = () => {
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="w-full lg:w-1/2 text-center ">
-                    <img src="https://i.ibb.co/5MkNZ39/logcar.jpg" alt="" />
+                <div className="w-full  text-center ">
+                    <img className="w-[500px] h-[520px] rounded-lg" src="https://i.ibb.co/5MkNZ39/logcar.jpg" alt="" />
                 </div>
                 <div className="w-full card flex-shrink-0 max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handleRegister}>
@@ -83,7 +83,7 @@ const Register = () => {
                                 <button to="/register" className="btn btn-primary">
                                     Register
                                 </button>
-                                <p>Already Have An Account <Link to="/login">Login</Link></p>
+                                <p>Already Have An Account <Link className="underline" to="/login">Login</Link></p>
                             </div>
                         </div>
                     </form>

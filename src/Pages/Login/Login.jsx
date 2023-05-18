@@ -1,9 +1,10 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
 import { Link } from "react-router-dom";
+import { FaFacebook, FaGoogle, FaTwitter,  } from 'react-icons/fa';
 
 const Login = () => {
-    const {signInUser} = useContext(AuthContext);
+    const {signInUser, loginWithGoogle} = useContext(AuthContext);
     const [success, setSuccess] = useState();
     const [error, setError] = useState();
 
@@ -26,15 +27,24 @@ const Login = () => {
             setError(e.message)
             setSuccess("")
         })
+    }
 
-
+    const handelGoogleLogin = () =>{
+        loginWithGoogle()
+        .then(result =>{
+            const loggedUser = result.user;
+            console.log(loggedUser);
+        })
+        .catch(e =>{
+            console.log(e.message)
+        })
     }
 
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse">
-                <div className="w-full lg:w-1/2 text-center lg:text-left">
-                    <img src="https://i.ibb.co/5MkNZ39/logcar.jpg" alt="" />
+                <div className="w-full  text-center lg:text-left">
+                    <img className="w-[500px] h-[452px] rounded-lg" src="https://i.ibb.co/5MkNZ39/logcar.jpg" alt="" />
                 </div>
                 <div className="w-full  card flex-shrink-0 max-w-sm shadow-2xl bg-base-100">
                     <form onSubmit={handelLonin}>
@@ -56,7 +66,14 @@ const Login = () => {
                             <div className="form-control mt-6">
                                 <button to="/" className="btn btn-primary">Login</button>
                             </div>
-                            <p>Dont have Account? <Link to="/register">Retister</Link></p>
+                            <p>Dont have Account? <Link className="underline" to="/register">Retister</Link></p>
+                            <h2 className="mt-5 text-xs text-center">Or login With</h2>
+                            <hr />
+                            <div className="flex mx-auto gap-8">
+                                <FaFacebook className="text-2xl text-blue-700"></FaFacebook>
+                                <FaTwitter className="text-2xl text-blue-700"></FaTwitter>
+                                <FaGoogle onClick={handelGoogleLogin} className="text-2xl text-blue-700"></FaGoogle>
+                            </div>
                         </div>
                     </form>
                 </div>

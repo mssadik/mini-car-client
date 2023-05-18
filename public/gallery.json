@@ -1,0 +1,75 @@
+[
+  {
+      "id": 1,
+      "name": "Speedy Racer",
+      "image": "https://i.ibb.co/L99X7Xq/g1.jpg",
+      "features": "Fast, sleek design, remote-controlled, lights"
+    },
+    {
+      "id": 2,
+      "name": "Off-Road Beast",
+      "image": "https://i.ibb.co/pQHMXHS/g11.jpg",
+      "features": "Powerful, all-terrain capabilities, rugged build"
+    },
+    {
+      "id": 3,
+      "name": "City Cruiser",
+      "image": "https://i.ibb.co/CHVW4Rp/g10.webp",
+      "features": "Compact, urban style, realistic sounds"
+    },
+    {
+      "id": 4,
+      "name": "Supercharged Turbo",
+      "image": "https://i.ibb.co/L99X7Xq/g1.jpg",
+      "features": "Turbo boost, high-speed performance, flashy colors"
+    },
+    {
+      "id": 5,
+      "name": "Convertible Dream",
+      "image": "https://i.ibb.co/mzQsmHw/g4.jpg",
+      "features": "Convertible top, luxurious interior, smooth ride"
+    },
+    {
+      "id": 6,
+      "name": "Monster Truck Madness",
+      "image": "https://i.ibb.co/5MkNZ39/logcar.jpg",
+      "features": "Giant wheels, extreme suspension, monster roar"
+    },
+    {
+      "id": 7,
+      "name": "Sleek Sports Coupe",
+      "image": "https://i.ibb.co/pzRYZCy/g2.jpg",
+      "features": "Aerodynamic shape, racing stripes, high-performance"
+    },
+    {
+      "id": 8,
+      "name": "Classic Vintage Ride",
+      "image": "https://i.ibb.co/mzQsmHw/g4.jpg",
+      "features": "Old-fashioned charm, retro design, timeless appeal"
+    },
+    {
+      "id": 9,
+      "name": "Adventure SUV",
+      "image": "https://i.ibb.co/pzRYZCy/g2.jpg",
+      "features": "Spacious interior, off-road capabilities, roof rack"
+    },
+    {
+      "id": 10,
+      "name": "Fire Rescue Hero",
+      "image": "https://i.ibb.co/bKVnDrN/g7.jpg",
+      "features": "Emergency lights, siren sounds, rescue accessories"
+    },
+    {
+      "id": 11,
+      "name": "Electric Drifter",
+      "image": "https://i.ibb.co/hFr358M/g8.webp",
+      "features": "Drifting action, electric-powered, rechargeable"
+    },
+    {
+      "id": 12,
+      "name": "Police Pursuit",
+      "image": "https://i.ibb.co/BTFN9sv/g9.jpg",
+      "features": "Police decals, pursuit lights, realistic radio"
+    }
+  ]
+  
