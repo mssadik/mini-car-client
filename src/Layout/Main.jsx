@@ -6,7 +6,7 @@ const Main = () => {
     return (
         <div>
             <Navbar></Navbar>
-            <Outlet></Outlet>
+            <Outlet></Outlet>{/* This will render the child routes */}
             <Footer></Footer>
         </div>
     );
