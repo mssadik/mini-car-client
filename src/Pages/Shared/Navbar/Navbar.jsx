@@ -14,6 +14,8 @@ const Navbar = () => {
                         <div className="flex flex-col gap-3">
                             <Link className="" to="/">Home</Link>
                             <Link to="/blogs">Blog</Link>
+                            <Link to="/register">Sign Up</Link>
+                            <Link to="/login">Login</Link>
                         </div>
                     </ul>
                 </div>
@@ -24,6 +26,8 @@ const Navbar = () => {
                     <div className="flex gap-3">
                     <Link to="/">Home</Link>
                     <Link to="/blogs">Blog</Link>
+                    <Link to="/register">Sign Up</Link>
+                    <Link to="/login">Login</Link>
                     </div>
                 </ul>
             </div>
