@@ -5,6 +5,7 @@ import Register from "../Pages/Register/Register";
 import Login from "../Pages/Login/Login";
 import NotFound from "../Pages/NotFound/NotFound";
 import AddAToy from "../Pages/AddAToy/AddAToy";
+import PriveteRoute from "./PriveteRoute";
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
         },
         {
           path: "/addAToy",
-          element: <AddAToy></AddAToy>
+          element: <PriveteRoute><AddAToy></AddAToy></PriveteRoute>
         },
         {
           path: "*",

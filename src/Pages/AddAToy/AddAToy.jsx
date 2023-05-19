@@ -1,5 +1,8 @@
+import { useContext } from "react";
 import "./AddAToy.css"
+import { AuthContext } from './../../Providers/AuthProviders';
 const AddAToy = () => {
+    const {user} = useContext(AuthContext);
     const handelAddToy = event =>{
         event.preventDefault();
         const form = event.target;
@@ -11,8 +14,20 @@ const AddAToy = () => {
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const decription = form.decription.value;
-        const data = {photo, toyName, sellerName, sellerEmail, subCategory, rating, quantity, decription}
-        console.log(data);
+        const car = {photo, toyName, sellerName, sellerEmail, subCategory, rating, quantity, decription}
+        console.log(car);
+
+        // send data to server
+        fetch('http://localhost:5000/cars',{
+            method: "POST",
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(car)
+        })
+        .then(res => res.json())
+        .then(data =>console.log(data))
+
     }
     return (
         <div>
@@ -38,7 +53,7 @@ const AddAToy = () => {
                         <div className="style">
                             <div className=" md:mb-0">
                                 <label htmlFor="sellerEmail">Seller Email</label>
-                                <input className="w-full md:w-64" type="email" name="sellerEmail" required placeholder="Seller Email" />
+                                <input className="w-full md:w-64" type="email" name="sellerEmail" required defaultValue={user?.email} />
                             </div>
                             <div>
                                 <label htmlFor="subCategory">Sub Category</label>
@@ -60,7 +75,7 @@ const AddAToy = () => {
                             </div>
                         </div>
                     </div>
-                        <input  className="btn btn-wide ml-8 mb-10" type="submit" value="Add A Toy" />
+                        <input  className="btn btn-wide ml-8 mb-10" type="submit" value="Add A Car" />
                 </form>
             </div>
         </div>

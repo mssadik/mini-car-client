@@ -1,12 +1,17 @@
 import { useContext, useState } from "react";
 import { AuthContext } from "../../Providers/AuthProviders";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaFacebook, FaGoogle, FaTwitter,  } from 'react-icons/fa';
 
 const Login = () => {
     const {signInUser, loginWithGoogle} = useContext(AuthContext);
     const [success, setSuccess] = useState();
     const [error, setError] = useState();
+    const navigate = useNavigate();
+    const location = useLocation();
+    console.log(location);
+
+    const from = location.state?.from?.pathname || '/'
 
     const handelLonin = event =>{
         event.preventDefault();
@@ -22,6 +27,7 @@ const Login = () => {
             console.log(signedUser)
             setSuccess("User login Successfull")
             setError("")
+            navigate(from)
         })
         .catch(e =>{
             setError(e.message)
