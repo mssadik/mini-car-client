@@ -8,7 +8,7 @@ const Footer = () => {
         <div className="flex flex-wrap">
           <div className="w-full md:w-1/3">
             <div className="logo">
-            <Link to="/"><img className="w-1/2" src="https://i.ibb.co/hHMWDH2/logo.png" alt="" /></Link>
+            <img className="w-1/2" src="https://i.ibb.co/hHMWDH2/logo.png" alt="" />
             </div>
           </div>
           <div className="w-full md:w-1/3">

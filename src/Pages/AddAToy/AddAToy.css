@@ -1,0 +1,10 @@
+.style label{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.style input{
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 10px;
+}
