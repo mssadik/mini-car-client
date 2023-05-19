@@ -6,6 +6,7 @@ import Login from "../Pages/Login/Login";
 import NotFound from "../Pages/NotFound/NotFound";
 import AddAToy from "../Pages/AddAToy/AddAToy";
 import PriveteRoute from "./PriveteRoute";
+import AllToy from "../Pages/AllToy/AllToy";
 
 const router = createBrowserRouter([
     {
@@ -27,6 +28,11 @@ const router = createBrowserRouter([
         {
           path: "/addAToy",
           element: <PriveteRoute><AddAToy></AddAToy></PriveteRoute>
+        },
+        {
+          path: "/allToy",
+          element:<AllToy></AllToy>,
+          loader: () => fetch('http://localhost:5000/cars')
         },
         {
           path: "*",

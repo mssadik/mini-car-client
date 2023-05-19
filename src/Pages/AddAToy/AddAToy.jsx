@@ -14,7 +14,8 @@ const AddAToy = () => {
         const rating = form.rating.value;
         const quantity = form.quantity.value;
         const decription = form.decription.value;
-        const car = {photo, toyName, sellerName, sellerEmail, subCategory, rating, quantity, decription}
+        const price = form.price.value;
+        const car = {photo, toyName, sellerName, sellerEmail, subCategory, rating, quantity, decription, price}
         console.log(car);
 
         // send data to server
@@ -72,6 +73,10 @@ const AddAToy = () => {
                             <div>
                                 <label htmlFor="decription">Detail Description</label>
                                 <input className="w-full md:w-64" type="text" name="decription" required placeholder="Detail Description" />
+                            </div>
+                            <div>
+                                <label htmlFor="price">Price</label>
+                                <input className="w-full md:w-64" type="text" name="price" required placeholder="Price" />
                             </div>
                         </div>
                     </div>

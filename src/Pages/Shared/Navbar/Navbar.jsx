@@ -23,9 +23,10 @@ const Navbar = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52">
                         <div className="flex flex-col gap-3 text-black">
                             <Link className="" to="/">Home</Link>
-                            <Link to="/blogs">Blog</Link>
-                            <Link to="/register">Sign Up</Link>
+                            <Link to="/allToy">All Toy</Link>
                             <Link to="/addAToy">Add A Toy</Link>
+                            <Link to="/register">Sign Up</Link>
+                            <Link to="/blogs">Blog</Link>
                             {
                                 user ? <Link onClick={handelLogOut} to="/">Log Out</Link>:
                                 <Link to="/login">Login</Link> 
@@ -37,11 +38,12 @@ const Navbar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <div className="flex gap-3">
+                    <div className="flex gap-5">
                         <Link to="/">Home</Link>
-                        <Link to="/blogs">Blog</Link>
-                        <Link to="/register">Sign Up</Link>
+                        <Link to="/allToy">All Toy</Link>
                         <Link to="/addAToy">Add A Toy</Link>
+                        <Link to="/register">Sign Up</Link>
+                        <Link to="/blogs">Blog</Link>
                         {
                                 user ? <Link onClick={handelLogOut} to="/">Log Out</Link>:
                                 <Link to="/login">Login</Link> 
