@@ -1,17 +1,34 @@
 import { useLoaderData } from "react-router-dom";
-import Car from "./Car";
+import ToyRow from "./ToyRow";
 
 const AllToy = () => {
     const cars = useLoaderData();
     console.log(cars);
+    
+
     return (
         <div>
             <h2 className="text-3xl font-bold mt-20 text-center">All toy</h2>
             <hr className="mx-40 mb-10" />
-            <div className="grid gap-5 mx-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mx-auto">
-                {
-                    cars.map(car => <Car key={car._id} car={car}></Car>)
-                }
+            <div className="overflow-x-auto">
+                <table className="table table-compact w-full">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Seller Name</th>
+                            <th>Toy Name</th>
+                            <th>Sub-category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Click</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            cars.map(car => <ToyRow key={car._id} car={car}></ToyRow>)
+                        }
+                    </tbody>
+                </table>
             </div>
         </div>
     );
