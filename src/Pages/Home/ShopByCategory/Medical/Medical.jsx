@@ -1,10 +1,10 @@
 
 const Medical = ({car}) => {
-    const {photo, toyName} = car;
+    const {image, name} = car;
     return (
         <div className="">
-            <img className="w-[200px]" src={photo} alt="" />
-            <h2>{toyName}</h2>
+            <img className="w-[200px]" src={image} alt="" />
+            <h2>{name}</h2>
         </div>
     );
 };

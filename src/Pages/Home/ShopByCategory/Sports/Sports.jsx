@@ -1,5 +1,6 @@
+import React from 'react';
 
-const Military = ({car}) => {
+const Sports = ({car}) => {
     const {image, name} = car;
     return (
         <div>
@@ -9,4 +10,4 @@ const Military = ({car}) => {
     );
 };
 
-export default Military;
+export default Sports;

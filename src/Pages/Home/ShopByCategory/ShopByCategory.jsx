@@ -4,13 +4,14 @@ import "react-tabs/style/react-tabs.css";
 import "./ShopByCategory.css";
 import Medical from "./Medical/Medical";
 import Military from "./Military/Military";
+import Sports from "./Sports/Sports";
 
 const ShopByCategory = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   const [cars, setCars] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/cars')
+    fetch('http://localhost:5000/category')
       .then(res => res.json())
       .then(data => setCars(data))
   }, [])
@@ -28,31 +29,30 @@ const ShopByCategory = () => {
         className="custom-tabs"
       >
         <TabList className="custom-tab-list">
-          <Tab className="custom-tab">Category 1</Tab>
-          <Tab className="custom-tab">Category 2</Tab>
-          <Tab className="custom-tab">Category 3</Tab>
+          <Tab className="custom-tab">Medical</Tab>
+          <Tab className="custom-tab">Military</Tab>
+          <Tab className="custom-tab">Sports</Tab>
         </TabList>
 
         <TabPanel className="custom-tab-panel">
           <div className="flex gap-5">
             {
-              // cars.filter(car => car.subCategory === "Medical").map(car => <p key={car._id}>{car.subCategory} {car.toyName}</p>)
-              cars.filter(car => car.subCategory === "Medical").map(car => <Medical key={car._id} car={car}></Medical>)
+              cars.filter(car => car.category === "Medical").map(car => <Medical key={car._id} car={car}></Medical>)
             }
           </div>
         </TabPanel>
         <TabPanel className="custom-tab-panel">
-          <div className="flex">
+          <div className="flex gap-5">
               {
-                cars.filter(car => car.subCategory === "Military").map(car => <Military key={car._id} car={car}></Military>)
+                cars.filter(car => car.category === "Military").map(car => <Military key={car._id} car={car}></Military>)
               }
           </div>
         </TabPanel>
         <TabPanel className="custom-tab-panel">
-          <div className="">
-            <h3 className="sub-category">Sub-category 3.1</h3>
-            <h3 className="sub-category">Sub-category 3.2</h3>
-            <h3 className="sub-category">Sub-category 3.3</h3>
+          <div className="flex gap-5">
+            {
+              cars.filter(car => car.category === "Sports").map(car => <Sports key={car._id} car={car}></Sports>)
+            }
           </div>
         </TabPanel>
       </Tabs>

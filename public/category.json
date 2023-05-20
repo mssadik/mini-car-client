@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Red Sports Car",
+    "image": "https://example.com/red-sports-car.jpg",
+    "price": 29.99,
+    "category": "Sports"
+  },
+  {
+    "id": 2,
+    "name": "Blue Pickup Truck",
+    "image": "https://example.com/blue-pickup-truck.jpg",
+    "price": 24.99,
+    "category": "Utility"
+  },
+  {
+    "id": 3,
+    "name": "Yellow Race Car",
+    "image": "https://example.com/yellow-race-car.jpg",
+    "price": 19.99,
+    "category": "Sports"
+  },
+  {
+    "id": 4,
+    "name": "Green Monster Truck",
+    "image": "https://example.com/green-monster-truck.jpg",
+    "price": 34.99,
+    "category": "Off-Road"
+  },
+  {
+    "id": 5,
+    "name": "Purple Convertible",
+    "image": "https://example.com/purple-convertible.jpg",
+    "price": 27.99,
+    "category": "Sports"
+  },
+  {
+    "id": 6,
+    "name": "Silver Sedan",
+    "image": "https://example.com/silver-sedan.jpg",
+    "price": 22.99,
+    "category": "Family"
+  },
+  {
+    "id": 7,
+    "name": "Orange Buggy",
+    "image": "https://example.com/orange-buggy.jpg",
+    "price": 39.99,
+    "category": "Off-Road"
+  },
+  {
+    "id": 8,
+    "name": "White SUV",
+    "image": "https://example.com/white-suv.jpg",
+    "price": 31.99,
+    "category": "Family"
+  },
+  {
+    "id": 9,
+    "name": "Pink Convertible",
+    "image": "https://example.com/pink-convertible.jpg",
+    "price": 26.99,
+    "category": "Sports"
+  },
+  {
+    "id": 10,
+    "name": "Black Limousine",
+    "image": "https://example.com/black-limousine.jpg",
+    "price": 49.99,
+    "category": "Luxury"
+  },
+  {
+    "id": 11,
+    "name": "Yellow Taxi",
+    "image": "https://example.com/yellow-taxi.jpg",
+    "price": 18.99,
+    "category": "Utility"
+  },
+  {
+    "id": 12,
+    "name": "Red Fire Truck",
+    "image": "https://example.com/red-fire-truck.jpg",
+    "price": 36.99,
+    "category": "Utility"
+  },
+  {
+    "id": 13,
+    "name": "Blue Convertible",
+    "image": "https://example.com/blue-convertible.jpg",
+    "price": 25.99,
+    "category": "Sports"
+  },
+  {
+    "id": 14,
+    "name": "Green Electric Car",
+    "image": "https://example.com/green-electric-car.jpg",
+    "price": 39.99,
+    "category": "Environmental"
+  },
+  {
+    "id": 15,
+    "name": "Purple ATV",
+    "image": "https://example.com/purple-atv.jpg",
+    "price": 28.99,
+    "category": "Off-Road"
+  },
+  {
+    "id": 16,
+    "name": "Silver Race Car",
+    "image": "https://example.com/silver-race-car.jpg",
+    "price": 33.99,
+    "category": "Sports"
+  },
+  {
+    "id": 17,
+    "name": "Orange Monster Truck",
+    "image": "https://example.com/orange-monster-truck.jpg",
+    "price": 42.99,
+    "category": "Off-Road"
+  },
+  {
+    "id": 18,
+    "name": "White Sports Car",
+    "image": "https://example.com/white-sports-car.jpg",
+    "price": 30.99,
+    "category": "Sports"
+  },
+  {
+    "id": 19,
+    "name": "Pink Scooter",
+    "image": "https://example.com/pink-scooter.jpg",
+    "price": 17.99,
+    "category": "Ride-On"
+  },
+  {
+    "id": 20,
+    "name": "Black Coupe",
+    "image": "https://example.com/black-coupe.jpg",
+    "price": 28.99,
+    "category": "Sports"
+  }
+]
