@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 
 const Gallery = () => {
   const [images, setImages] = useState([]);
@@ -22,7 +22,7 @@ const Gallery = () => {
   };
 
   return (
-    <div>
+    <div className='mt-20'>
       <h2 className="text-4xl text-center font-bold ">Our Gallery</h2>
       <hr className='mx-40' />
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-40 pt-10">

@@ -7,6 +7,8 @@ import NotFound from "../Pages/NotFound/NotFound";
 import AddAToy from "../Pages/AddAToy/AddAToy";
 import PriveteRoute from "./PriveteRoute";
 import AllToy from "../Pages/AllToy/AllToy";
+import ViewDetails from "../Pages/AllToy/ViewDetails";
+import MayToy from "../Pages/MayToy/MayToy";
 
 const router = createBrowserRouter([
     {
@@ -32,7 +34,16 @@ const router = createBrowserRouter([
         {
           path: "/allToy",
           element:<AllToy></AllToy>,
-          loader: () => fetch('http://localhost:5000/cars')
+          loader: () => fetch('https://test-two-sigma-13.vercel.app/cars')
+        },
+        {
+          path:  "/cars/:id",
+          element: <PriveteRoute> <ViewDetails></ViewDetails></PriveteRoute>,
+          loader: ({params}) => fetch(`https://test-two-sigma-13.vercel.app/cars/${params.id}`)
+        },
+        {
+          path: "/carss",
+          element: <MayToy></MayToy>
         },
         {
           path: "*",

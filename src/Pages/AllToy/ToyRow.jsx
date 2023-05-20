@@ -1,19 +1,11 @@
-import { useState } from "react";
+
+import { Link } from "react-router-dom";
 
 const ToyRow = ({ car, }) => {
     const {sellerName, toyName, subCategory, price, quantity, _id } = car
 
 
-    const handelViewDetails = (id) =>{
-        fetch(`http://localhost:5000/cars/${id}`,{
-            method: "GET",
-        })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data);
-        })
-
-    }
+    
 
     
 
@@ -25,7 +17,7 @@ const ToyRow = ({ car, }) => {
             <td>{subCategory}</td>
             <td>{price}</td>
             <td>{quantity}</td>
-            <td><button onClick={() => handelViewDetails(_id)} className='btn btn-primary'>Details</button></td>
+            <td><Link to={`/cars/${_id}`} className='btn btn-primary'>Details</Link></td>
         </tr>
     );
 };

@@ -24,11 +24,12 @@ const Navbar = () => {
                         <div className="flex flex-col gap-3 text-black">
                             <Link className="" to="/">Home</Link>
                             <Link to="/allToy">All Toy</Link>
+                            
                             <Link to="/addAToy">Add A Toy</Link>
                             <Link to="/register">Sign Up</Link>
                             <Link to="/blogs">Blog</Link>
                             {
-                                user ? <Link onClick={handelLogOut} to="/">Log Out</Link>:
+                                user ? <><Link onClick={handelLogOut} to="/">Log Out</Link> <Link to="/carss">My Toy</Link></>:
                                 <Link to="/login">Login</Link> 
                             }
                         </div>
@@ -45,7 +46,7 @@ const Navbar = () => {
                         <Link to="/register">Sign Up</Link>
                         <Link to="/blogs">Blog</Link>
                         {
-                                user ? <Link onClick={handelLogOut} to="/">Log Out</Link>:
+                                user ?  <><Link onClick={handelLogOut} to="/">Log Out</Link> <Link to="/carss">My Toy</Link></>:
                                 <Link to="/login">Login</Link> 
                             }
                     </div>

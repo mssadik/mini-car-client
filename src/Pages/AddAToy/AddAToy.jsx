@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import "./AddAToy.css"
 import { AuthContext } from './../../Providers/AuthProviders';
+import Swal from 'sweetalert2'
+
 const AddAToy = () => {
     const {user} = useContext(AuthContext);
     const handelAddToy = event =>{
@@ -19,7 +21,7 @@ const AddAToy = () => {
         console.log(car);
 
         // send data to server
-        fetch('http://localhost:5000/cars',{
+        fetch('https://test-two-sigma-13.vercel.app/cars',{
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -27,7 +29,17 @@ const AddAToy = () => {
             body: JSON.stringify(car)
         })
         .then(res => res.json())
-        .then(data =>console.log(data))
+        .then(data =>{
+            console.log(data);
+            if(data.insertedId){
+                Swal.fire({
+                    title: 'success!',
+                    text: 'This toy added',
+                    icon: 'success',
+                    confirmButtonText: 'Cool'
+                  })
+            }
+        })
 
     }
     return (
