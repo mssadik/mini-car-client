@@ -8,9 +8,9 @@ const AllToy = () => {
 
     return (
         <div>
-            <h2 className="text-3xl font-bold mt-20 text-center">All toy</h2>
+            <h2 className="text-3xl text-white font-bold mt-20 text-center">All toy</h2>
             <hr className="mx-40 mb-10" />
-            <div className="overflow-x-auto">
+            <div className="overflow-x-auto mx-10">
                 <table className="table table-compact w-full">
                     <thead>
                         <tr>
