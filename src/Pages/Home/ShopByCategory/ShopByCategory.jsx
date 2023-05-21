@@ -11,7 +11,7 @@ const ShopByCategory = () => {
 
   const [cars, setCars] = useState([])
   useEffect(() => {
-    fetch('http://localhost:5000/category')
+    fetch('https://test-two-sigma-13.vercel.app/category')
       .then(res => res.json())
       .then(data => setCars(data))
   }, [])
@@ -22,34 +22,36 @@ const ShopByCategory = () => {
 
   return (
     <div className="shop-by-category-container">
-      <h2 className="shop-by-category-title">Shop by Category</h2>
+      <h2 className="shop-by-category-title text-white font-bold">Shop by Category</h2>
+      <hr className="mb-5 mt-0 mx-40" />
       <Tabs
         selectedIndex={activeTab}
         onSelect={handleTabChange}
         className="custom-tabs"
       >
         <TabList className="custom-tab-list">
-          <Tab className="custom-tab">Medical</Tab>
-          <Tab className="custom-tab">Military</Tab>
-          <Tab className="custom-tab">Sports</Tab>
+          <Tab className="custom-tab font-semibold">Military</Tab>
+          <Tab className="custom-tab font-semibold">Medical</Tab>
+          <Tab className="custom-tab font-semibold">Sports</Tab>
         </TabList>
 
         <TabPanel className="custom-tab-panel">
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
+            {
+              cars.filter(car => car.category === "Military").map(car => <Military key={car._id} car={car}></Military>)
+            }
+
+          </div>
+        </TabPanel>
+        <TabPanel className="custom-tab-panel">
+          <div className="flex flex-wrap gap-5">
             {
               cars.filter(car => car.category === "Medical").map(car => <Medical key={car._id} car={car}></Medical>)
             }
           </div>
         </TabPanel>
         <TabPanel className="custom-tab-panel">
-          <div className="flex gap-5">
-              {
-                cars.filter(car => car.category === "Military").map(car => <Military key={car._id} car={car}></Military>)
-              }
-          </div>
-        </TabPanel>
-        <TabPanel className="custom-tab-panel">
-          <div className="flex gap-5">
+          <div className="flex flex-wrap gap-5">
             {
               cars.filter(car => car.category === "Sports").map(car => <Sports key={car._id} car={car}></Sports>)
             }

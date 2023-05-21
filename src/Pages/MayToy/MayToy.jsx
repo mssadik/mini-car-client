@@ -9,7 +9,7 @@ const MayToy = () => {
 
     useEffect(() => {
         if (user?.email) {
-            const url = `http://localhost:5000/carss?sellerEmail=${user.email}`;
+            const url = `https://test-two-sigma-13.vercel.app/carss?sellerEmail=${user.email}`;
             fetch(url)
                 .then(res => res.json())
                 .then(data => {

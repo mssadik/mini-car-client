@@ -1,11 +1,9 @@
 /* ShopByCategory.css */
 
 .shop-by-category-container {
-    max-width: 800px;
+    max-width: 1200;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
   }
   
   .shop-by-category-title {
