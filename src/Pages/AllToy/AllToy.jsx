@@ -20,7 +20,7 @@ const AllToy = () => {
     );
 
     return (
-        <div>
+        <div className="mb-8">
             <h2 className="text-3xl text-white font-bold mt-20 text-center">All Car Here</h2>
             <div className="flex justify-center my-4">
                 <input
@@ -38,6 +38,7 @@ const AllToy = () => {
                         <tr>
                             <th></th>
                             <th>Seller Name</th>
+                            <th>Seller Email</th>
                             <th>Toy Name</th>
                             <th>Sub-category</th>
                             <th>Price</th>
