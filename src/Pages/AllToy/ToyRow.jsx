@@ -1,8 +1,10 @@
 
+import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const ToyRow = ({ car, }) => {
-    const {sellerName, toyName, subCategory, price, quantity, _id, sellerEmail } = car
+    console.log(car);
+    const {sellerName, toyName, subCategory, rating, price, quantity, _id, sellerEmail } = car
 
 
     
@@ -11,12 +13,13 @@ const ToyRow = ({ car, }) => {
 
     return (
         <tr>
-            <th>1</th>
+            <th>*</th>
             <td>{sellerName}</td>
             <td>{sellerEmail}</td>
             <td>{toyName}</td>
             <td>{subCategory}</td>
             <td>${price}</td>
+            <td>{rating} <FaStar className="text-red-500"></FaStar></td>
             <td>{quantity}</td>
             <td><Link to={`/cars/${_id}`} className='btn btn-primary'>Details</Link></td>
         </tr>

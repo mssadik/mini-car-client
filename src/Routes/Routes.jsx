@@ -9,6 +9,8 @@ import PriveteRoute from "./PriveteRoute";
 import AllToy from "../Pages/AllToy/AllToy";
 import ViewDetails from "../Pages/AllToy/ViewDetails";
 import MayToy from "../Pages/MayToy/MayToy";
+import UpdateToy from "../Pages/UpdateToy/UpdateToy";
+import Blogs from "../Pages/Blogs/Blogs";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +46,15 @@ const router = createBrowserRouter([
         {
           path: "/carss",
           element: <MayToy></MayToy>
+        },
+        {
+          path: "/updateCar/:id",
+          element: <UpdateToy></UpdateToy>,
+          loader: ({params}) => fetch(`https://test-two-sigma-13.vercel.app/cars/${params.id}`)
+        },
+        {
+          path: "/blogs",
+          element: <Blogs></Blogs>
         },
         {
           path: "*",

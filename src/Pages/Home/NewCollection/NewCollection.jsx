@@ -4,7 +4,7 @@ const NewCollection = () => {
         <div>
             <h2 className="text-3xl text-center font-bold text-white">New Collections</h2>
             <hr className="mx-40 mb-10" />
-            <div className="carousel w-[1120px] mx-auto h-[420px] rounded-lg">
+            <div className="carousel w-full mx-auto h-[420px] rounded-lg">
                 <div id="slide1" className="carousel-item relative w-full">
                     <img src="https://i.ibb.co/7RbwFMw/henry-becker-0-Ist-S7-STNm4-unsplash.jpg" className="w-full" />
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
